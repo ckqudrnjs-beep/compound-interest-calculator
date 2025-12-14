@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동 복리 계산기: 월/연 투자 기간별 미래 가치 시뮬레이션</title>
+    <link rel="icon" href="/favicon.ico?v=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>자동 복리 계산기</h1>
+        <p>초기 투자금, 월 적립액, 연 수익률을 기반으로 미래 복리 수익을 예측합니다.</p>
+    </header>
+
+    <main class="container">
+        <section class="input-section">
+            <div class="form-group">
+                <label for="initialAmount">초기 투자금 (원)</label>
+                <input type="number" id="initialAmount" value="1000000" min="0">
+            </div>
+            <div class="form-group">
+                <label for="monthlyDeposit">월 적립액 (원)</label>
+                <input type="number" id="monthlyDeposit" value="500000" min="0">
+            </div>
+            <div class="form-group">
+                <label for="annualRate">연 수익률 (%)</label>
+                <input type="number" id="annualRate" value="7" min="0" max="100">
+            </div>
+            <div class="form-group">
+                <label for="years">투자 기간 (년)</label>
+                <input type="number" id="years" value="10" min="1" max="50">
+            </div>
+            <button id="calculateBtn">결과 계산하기</button>
+        </section>
+
+        <section class="result-section">
+            <h2>💰 계산 결과 요약</h2>
+            <div id="summary">
+                <p>최종 총액: <strong id="finalAmount">0원</strong></p>
+                <p>총 원금 (투자금): <strong id="totalPrincipal">0원</strong></p>
+                <p>총 복리 이익: <strong id="totalInterest" class="interest">0원</strong></p>
+            </div>
+
+            <h2>📈 연도별 상세 성장 테이블</h2>
+            <div class="table-container">
+                <table id="growthTable">
+                    <thead>
+                        <tr>
+                            <th>연도</th>
+                            <th>누적 투자금</th>
+                            <th>복리 총액</th>
+                            <th>총 이익</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 beekayutil.com</p>
+        <p>
+            <a href="https://beekayutil.com" target="_blank">SEO 콘텐츠 분석기</a> | 
+            <a href="https://json.beekayutil.com" target="_blank">JSON/YAML 변환기</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
