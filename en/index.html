@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="google-site-verification" content="xzkheGRMivderCUCnHm9B8_Z2FEEcHmpLd70ckO_oAA" /> 
+    
+    <link rel="alternate" hreflang="ko" href="https://compound.beekayutil.com/" />
+    <link rel="alternate" hreflang="en" href="https://compound.beekayutil.com/en/" />
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4425383241428989"
+     crossorigin="anonymous"></script>
+    
+    <title>Compound Interest Calculator: Future Value & Investment Growth</title>
+    <link rel="icon" href="/favicon.ico?v=1">
+    
+    <style>
+        :root {
+            --primary-color: #2ecc71;
+            --secondary-bg: #f7f7f7;
+            --text-color: #333;
+            --border-color: #ddd;
+            --light-border: #eee;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: var(--text-color);
+            line-height: 1.6;
+            word-break: break-word; 
+            word-wrap: break-word; 
+            padding-bottom: 0; 
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        
+        .content-wrapper {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+            padding-bottom: 500px;
+            margin-bottom: 0;
+            position: relative;
+        }
+        
+        .container {
+            padding: 0; 
+            margin: 0;
+        }
+
+        /* 입력 및 버튼 스타일 */
+        .input-section { padding-bottom: 20px; }
+        .form-group { margin-bottom: 15px; }
+        
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        #calculateBtn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+            margin-top: 10px;
+        }
+        #calculateBtn:hover {
+            background-color: #27ae60;
+        }
+
+        /* 결과 섹션 스타일 */
+        .result-section { margin-top: 40px; padding-top: 20px; border-top: 1px dashed var(--border-color); }
+        #summary strong { font-size: 1.1em; color: var(--primary-color); }
+
+        /* AdSense 광고 컨테이너 스타일 */
+        .ad-container {
+            width: 100%;
+            min-height: 100px; 
+            margin: 20px 0;
+            text-align: center;
+            background-color: var(--secondary-bg);
+            border: 1px dashed #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8em;
+            color: #888;
+        }
+
+        /* SEO 정보 섹션 (Info-Section) 개선 */
+        .info-section {
+            margin-top: 40px;
+            padding: 20px; 
+            background-color: var(--secondary-bg); 
+            border-radius: 8px; 
+            border: 1px solid var(--border-color); 
+            position: relative;
+            z-index: 1000;
+        }
+
+        .info-section h2 { color: var(--primary-color); margin-top: 0; margin-bottom: 15px; padding-bottom: 5px; border-bottom: 2px solid var(--primary-color); }
+        .info-section ul, .info-section dl { list-style-type: none; padding-left: 0; }
+        .info-section dt { font-weight: bold; margin-top: 15px; padding-left: 10px; border-left: 3px solid var(--primary-color); }
+        .info-section dd { margin-left: 0; padding: 5px 0 10px 10px; border-bottom: 1px dotted var(--light-border); }
+
+        /* Footer 역할을 하는 div 스타일 */
+        .content-footer-area {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 800px;
+            padding: 15px 20px;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+            position: relative;
+            z-index: 1;
+            box-sizing: border-box;
+        }
+        .content-footer-area a {
+            color: white;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Compound Interest Calculator</h1>
+        <p>Calculate the future value of your investments with compound interest.</p>
+    </header>
+
+    <div class="content-wrapper">
+    <main class="container">
+        
+        <div class="ad-container top-ad">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-4425383241428989"
+                 data-ad-slot="6443125932"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <section class="input-section">
+            <div class="form-group">
+                <label for="initialAmount">Initial Investment (Principal, $):</label>
+                <input type="number" id="initialAmount" value="1000" min="0" step="100">
+            </div>
+            
+            <div class="form-group">
+                <label for="annualContribution">Annual Contribution ($):</label>
+                <input type="number" id="annualContribution" value="100" min="0" step="10">
+            </div>
+            
+            <div class="form-group">
+                <label for="annualRate">Annual Interest Rate (%):</label>
+                <input type="number" id="annualRate" value="7" min="0" step="0.1">
+            </div>
+
+            <div class="form-group">
+                <label for="compoundingPeriod">Compounding Frequency:</label>
+                <select id="compoundingPeriod">
+                    <option value="12">Monthly (12 times/year)</option>
+                    <option value="4">Quarterly (4 times/year)</option>
+                    <option value="2">Semi-Annually (2 times/year)</option>
+                    <option value="1">Annually (1 time/year)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="years">Investment Period (Years):</label>
+                <input type="number" id="years" value="10" min="1" max="100">
+            </div>
+
+            <button id="calculateBtn">Calculate Compound Interest</button>
+        </section>
+
+        <section class="result-section">
+            <h2>📊 Investment Forecast</h2>
+            <div id="summary">
+                <p>Future Value: <strong id="futureValue">N/A</strong></p>
+                <p>Total Contribution: <strong id="totalContribution">N/A</strong></p>
+                <p>Total Interest Earned: <strong id="totalInterest">N/A</strong></p>
+            </div>
+        </section>
+        
+        <div class="ad-container middle-ad">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-4425383241428989"
+                 data-ad-slot="6613698081"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <section class="info-section">
+            <h2 id="principle">💰 The Power of Compounding</h2>
+            <p>
+                Compound interest is the interest earned on both the initial principal and the interest accumulated from previous periods. It's often called "interest on interest" and is the key driver of long-term wealth accumulation.
+            </p>
+            
+            <h2 id="faq">📈 Formula and Terms</h2>
+            <dl>
+                <dt>Compounding Frequency</dt>
+                <dd>The number of times per year the interest is calculated and added to the principal. The more frequent the compounding (e.g., monthly vs. annually), the greater the final amount.</dd>
+                
+                <dt>Future Value (FV) Formula</dt>
+                <dd>Calculated using the formula: FV = P(1 + r/n)^(nt) + PMT * [((1 + r/n)^(nt) - 1) / (r/n)] where P is the principal, r is the annual rate, n is the compounding frequency, t is the time in years, and PMT is the periodic payment.</dd>
+            </dl>
+            
+            <p class="disclaimer">
+                <small>Disclaimer: The calculation results provided here are for informational and estimation purposes only. They do not constitute financial advice. Consult a professional financial advisor for specific investment guidance.</small>
+            </p>
+        </section>
+
+        <div class="ad-container bottom-ad">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-4425383241428989"
+                 data-ad-slot="1027341245"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <div class="content-footer-area">
+            <p>&copy; 2024 beekayutil.com</p>
+            <p>
+                <a href="https://beekayutil.com" target="_blank">SEO Analyzer</a> | 
+                <a href="https://json.beekayutil.com/en" target="_blank">JSON Formatter</a> |
+                <a href="https://compound.beekayutil.com/en" target="_blank">Compound Calculator</a>
+            </p>
+        </div>
+    </main>
+    </div> <script src="script.js"></script>
+</body>
+</html>
