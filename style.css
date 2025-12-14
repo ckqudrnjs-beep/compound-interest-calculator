@@ -104,7 +104,23 @@ input[type="number"] {
     text-align: center;
 }
 
-/* SEO 정보 섹션 스타일 추가 */
+/* 🟢 AdSense 광고 컨테이너 스타일 (새로 추가됨) 🟢 */
+.ad-container {
+    width: 100%;
+    /* 광고가 로드되기 전 여백을 확보하여 레이아웃 흔들림 방지 */
+    min-height: 100px; 
+    margin: 20px 0;
+    text-align: center; /* 광고를 가운데 정렬 */
+    background-color: var(--secondary-bg); /* 광고 로드 전 임시 배경색 */
+    border: 1px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    color: #888;
+}
+
+/* SEO 정보 섹션 스타일 */
 .info-section {
     margin-top: 40px;
     padding-top: 20px;
