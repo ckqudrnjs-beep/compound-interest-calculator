@@ -6,6 +6,7 @@
     
     <meta name="google-site-verification" content="xzkheGRMivderCUCnHm9B8_Z2FEEcHmpLd70ckO_oAA" /> 
     
+    <link rel="canonical" href="https://compound.beekayutil.com/" />
     <link rel="alternate" hreflang="ko" href="https://compound.beekayutil.com/" />
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4425383241428989"
@@ -159,7 +160,7 @@
             color: #888;
         }
         
-        /* SEO 정보 섹션 (Info-Section) -- 애드센스 정책 위반 해결을 위해 보강됨 */
+        /* SEO 정보 섹션 */
         .info-section {
             margin-top: 40px;
             padding: 20px; 
@@ -175,7 +176,7 @@
         .info-section dd { margin-left: 0; padding: 5px 0 10px 10px; border-bottom: 1px dotted var(--light-border); }
         .disclaimer small { font-size: 0.8em; color: #777; }
 
-        /* Footer 역할을 하는 div 스타일 */
+        /* Footer 스타일 */
         .content-footer-area {
             margin: 0 auto;
             width: 100%;
@@ -193,8 +194,13 @@
             text-decoration: none;
             margin: 0 5px;
         }
+        .footer-legal {
+            margin-top: 10px;
+            padding-top: 5px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9em;
+        }
         
-        /* 반응형 디자인 */
         @media (max-width: 600px) {
             .form-row {
                 flex-direction: column;
@@ -229,25 +235,25 @@
             <div class="form-row">
                 <div>
                     <label for="principal">초기 투자 원금 (원)</label>
-                    <input type="number" id="principal" placeholder="예: 1000000" value="1000000" required>
+                    <input type="number" id="principal" value="1000000" required>
                 </div>
                 <div>
                     <label for="annualContribution">연간 추가 납입액 (원)</label>
-                    <input type="number" id="annualContribution" placeholder="예: 500000" value="0" required>
+                    <input type="number" id="annualContribution" value="0" required>
                 </div>
             </div>
             <div class="form-row">
                 <div>
                     <label for="annualReturn">연간 예상 수익률 (%)</label>
-                    <input type="number" id="annualReturn" placeholder="예: 7" value="7" required>
+                    <input type="number" id="annualReturn" value="7" required>
                 </div>
                 <div>
                     <label for="years">투자 기간 (년)</label>
-                    <input type="number" id="years" placeholder="예: 10" value="10" required>
+                    <input type="number" id="years" value="10" required>
                 </div>
             </div>
             <button id="calculateBtn">복리 수익 계산</button>
-            <button id="clearBtn">초기화</button>
+            <button id="clearBtn" style="background-color: #7f8c8d; margin-top: 5px;">초기화</button>
         </section>
 
         <section id="results" class="result-section" style="display: none;">
@@ -279,25 +285,29 @@
         </div>
 
         <section class="info-section">
-            <h2 id="principle">💡 복리 계산의 원리와 장기 투자 전략 (E-E-A-T 강화)</h2>
+            <h2 id="principle">💡 복리 계산의 원리와 장기 투자 전략</h2>
+            
+
+[Image of compound interest vs simple interest graph]
+
             <p>
-                복리는 '이자에도 이자가 붙는' 방식을 의미하며, 장기적으로 자산 증식에 가장 강력한 영향을 미칩니다. 이 계산기는 일반적인 연 복리 모델을 기반으로 하며, 초기 원금과 추가 납입액 모두가 수익률에 따라 재투자되는 효과를 시뮬레이션합니다. 핵심은 **시간**과 **꾸준한 재투자**입니다.
+                복리는 '이자에도 이자가 붙는' 방식을 의미하며, 장기적으로 자산 증식에 기하급수적인 영향을 미칩니다. 핵심은 <strong>시간</strong>과 <strong>꾸준한 재투자</strong>입니다.
             </p>
             
             <h2 id="faq">🛠️ 복리 투자 성공을 위한 핵심 금융 지식</h2>
             <dl>
                 <dt>복리 vs. 단리</dt>
-                <dd>복리는 원금 + 누적 이자 전체에 이자가 붙는 방식이고, 단리는 오직 최초 원금에만 이자가 붙는 방식입니다. 장기적으로 복리가 단리보다 압도적으로 높은 수익을 창출합니다.</dd>
+                <dd>복리는 누적 이자 전체에 다시 이자가 붙지만, 단리는 최초 원금에만 이자가 붙습니다.</dd>
                 
                 <dt>72의 법칙 활용</dt>
-                <dd>원금이 두 배가 되는 데 걸리는 시간을 쉽게 계산하는 공식입니다. '72 ÷ 연간 수익률 (%)'입니다. 예를 들어 12% 수익률이라면, 72/12 = 6년 만에 원금이 두 배가 됩니다.</dd>
+                <dd>원금이 두 배가 되는 시간을 계산하는 공식: 72 ÷ 연간 수익률(%).</dd>
 
-                <dt>시간과 복리의 관계</dt>
-                <dd>투자기간 초반에는 단리와 복리의 차이가 미미하지만, 시간이 지날수록 누적 이자가 기하급수적으로 증가하며 복리 효과가 폭발합니다. 투자를 **'가장 일찍'** 시작하는 것이 가장 높은 수익률을 보장합니다.</dd>
+                <dt>시간의 중요성</dt>
+                <dd>투자기간이 길어질수록 복리 효과는 폭발적으로 증가합니다.</dd>
             </dl>
             
             <p class="disclaimer">
-                <small>면책 고지: 이 계산 결과는 예상이며 실제 시장 수익률과 다를 수 있습니다. 이 정보는 금융 전문가의 조언을 대체하지 않습니다. 투자는 신중하게 결정하십시오.</small>
+                <small>면책 고지: 이 정보는 금융 조언을 대체하지 않습니다. 투자는 본인의 판단 하에 신중히 결정하십시오.</small>
             </p>
         </section>
 
@@ -315,11 +325,16 @@
         
         <div class="content-footer-area">
             <p>&copy; 2024 beekayutil.com</p>
-            <p>
+            <div class="footer-legal">
+                <a href="https://beekayutil.com/privacy">개인정보처리방침</a> | 
+                <a href="https://beekayutil.com/terms">이용 약관</a> | 
+                <a href="https://beekayutil.com/contact">문의</a>
+            </div>
+            <p style="margin-top:10px;">
                 <a href="https://beekayutil.com" target="_blank">SEO 분석기</a> | 
                 <a href="https://base64.beekayutil.com" target="_blank">Base64 변환기</a> | 
                 <a href="https://json.beekayutil.com" target="_blank">JSON 변환기</a> |
-                <a href="https://compound.beekayutil.com" target="_blank">복리 계산기</a> |
+                <a href="https://compound.beekayutil.com">복리 계산기</a> |
                 <a href="https://labor.beekayutil.com" target="_blank">근로시간 계산기</a>
             </p>
         </div>
@@ -345,12 +360,10 @@
             let totalPrincipalPaid = principal; 
             
             for (let i = 0; i < years; i++) {
-                // 연초에 납입
                 if (i > 0) {
                     futureValue += annualContribution;
                     totalPrincipalPaid += annualContribution;
                 }
-                // 이자 계산 (복리)
                 futureValue *= (1 + annualReturn);
             }
             
